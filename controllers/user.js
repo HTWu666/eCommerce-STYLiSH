@@ -144,7 +144,7 @@ const signInFacebook = async (req, res) => {
     let userId
 
     if (isExist.length === 0) {
-      userId = await createUser('facebook', userName, userEmail, null, null, userPicture)
+      userId = await createUser('facebook', userName, userEmail, null, 'user', userPicture)
     } else {
       userId = isExist[0].id
     }
