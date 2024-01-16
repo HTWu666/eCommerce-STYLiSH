@@ -4,7 +4,7 @@ import axios from 'axios'
 import { getUser, createUser } from '../models/user.js'
 
 const createToken = (user) =>
-  jwt.sign(user, process.env.JWT_TOKEN, {
+  jwt.sign(user, process.env.JWT_KEY, {
     expiresIn: `${process.env.JWT_EXPIRATION_IN_SECOND}s`
   })
 
