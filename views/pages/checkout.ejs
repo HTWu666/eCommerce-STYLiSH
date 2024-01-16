@@ -1,0 +1,49 @@
+<title>STYLiSH - checkout</title>
+<link rel="stylesheet" type="text/css" href="/CSS/pages/checkout.css">
+
+<main>
+    <section id="product-list"></section>
+
+    <section id="recipient-info">
+        <div id="recipient-info-title">訂購資料</div>
+        <div class="line"></div>
+        <form id="recipient-info-form">
+            <div><label>收件人姓名</label><input type="text" id="recipient-name"></div>
+            <div><label>手機</label><input type="text" id="recipient-phone"></div>
+            <div><label>地址</label><input type="text" id="recipient-address"></div>
+            <div><label>Email</label><input type="email" id="recipient-email"></div>
+            <div>
+                <label>配送時間</label>
+                <select id="delivery-time">
+                    <option value="不指定">不指定</option>
+                    <option value="08:00-12:00">08:00 - 12:00</option>
+                    <option value="14:00-19:00">14:00 - 18:00</option>
+                </select>
+            </div>
+        </form>
+    </section>
+
+    <section id="credit-card-section">
+        <div id="card-title">付款資訊</div>
+        <div class="line"></div>
+        <div id="card-input-container">
+            <div class="card-input"><label>信用卡號碼</label><div class="tpfield tappay-field-focus card-input-field" id="card-number"></div></div>
+            <div class="card-input"><label>有效期限</label><div class="tpfield tappay-field-focus card-input-field" id="card-expiration-date"></div></div>
+            <div class="card-input"><label>安全碼</label><div class="tpfield tappay-field-focus card-input-field" id="card-ccv"></div></div>
+        </div>
+    </section>
+
+    <section id="checkout-section">
+        <div id="checkout-container">
+            <div class="checkout-item"><label>總金額</label><div id="subtotal"></div></div>
+            <div class="checkout-item"><label>運費</label><div id="freight"></div></div>
+            <div class="line"></div>
+            <div class="checkout-item"><label>應付金額</label><div id="total"></div></div>
+            <button id="checkout-btn">確認付款</button>
+        </div>
+    </section>
+</main>
+
+<script src="https://js.tappaysdk.com/sdk/tpdirect/v5.17.0"></script>
+<script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+<script src="/JavaScript/pages/checkout.js"></script>

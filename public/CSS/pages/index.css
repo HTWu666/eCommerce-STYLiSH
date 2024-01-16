@@ -1,0 +1,102 @@
+#campaign-section {
+    height: 40vh;
+    overflow: hidden;
+}
+
+#campaign-figure-container {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#campaign-figure {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    margin: 0;
+}
+
+#campaign-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;  
+}
+
+#campaign-caption {
+    text-align: center;
+    position: absolute;
+    width:max-content;
+    top:35%;
+    left:5%;
+    font-size: 40px;
+    color: black;
+}
+
+#product-section {
+    height: fit-content;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex-grow: 1;
+}
+
+.product-card-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2);
+    grid-auto-rows: minmax(auto, 500px);
+    gap: 20px;
+    width: 60%;
+    height: 100%;
+    padding: 30px;
+}
+
+.product-card {
+    display: flex;
+    flex-direction: column;
+}
+
+.img-link {
+    display: block;
+    width: 100%;
+    height: 80%;
+    margin-bottom: 20px;
+}
+
+.product-card img{
+    display: block;
+    max-width: 100%;
+    max-height: 100%;
+    width: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+
+.color-container {
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 10px;
+}
+
+.product-card-color-block {
+    border: 1px solid black;
+    height: 15px;
+    width: 15px;
+    margin-right: 8px;
+}
+
+.product-card-title {
+    line-height: 30px;
+    text-decoration: none;
+    color: black;
+}
+
+.product-card-title:hover{
+    color:rgb(211, 176, 81)
+}
+
+.product-card-price {
+    line-height: 30px;
+}

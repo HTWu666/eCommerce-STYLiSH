@@ -1,0 +1,176 @@
+body {
+    margin: 0;
+}
+
+#product-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 70px;
+    padding-left: 100px;
+    padding-right: 100px;
+}
+
+#main-img-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 40px;
+    width: 100%;
+    height: fit-content;
+}
+
+#main-img-container {
+    margin-right: 30px;
+    width: 50%;
+    height: 700px;
+}
+
+#main-img-container > img {
+    max-width: 100%;
+    max-height: 100%;
+    width: auto;
+    height: auto;
+    float: right;
+    object-fit: cover;
+}
+
+#info-container {
+    width: 40%;
+    height: 100%;
+    margin-bottom: auto;
+}
+
+#product-title {
+    font-size: 20px;
+    letter-spacing: 5px;
+    font-weight: bolder;
+    margin-bottom: 10px;
+}
+
+#product-id {
+    color: rgb(180, 177, 177);
+    margin-bottom: 20px;
+}
+
+#price {
+    font-size: 18px;
+    margin-bottom: 20px;
+}
+
+#variant-container {
+    display: flex;
+    margin-bottom: 20px;
+}
+
+#variant-container > label {
+    margin-right: 20px;
+}
+
+#variant-list {
+    display: flex;
+    flex-direction: column;
+}
+
+.variant > label {
+    display: flex;
+    justify-content: space-between;
+    width: 100px;
+    /* height: 100px; */
+}
+
+.color-block {
+    border: 1px solid rgb(146, 145, 145);
+    height: 20px;
+    width: 20px;
+    margin-left: 10px;
+}
+
+.color-block:hover {
+    cursor: pointer;
+    border: 2px solid rgb(82, 80, 80);
+}
+
+.size-block {
+    border: 1px solid gainsboro;
+    border-radius: 50%;
+    width: 20px;
+    text-align: center;
+    padding: 3px;
+    background-color: gainsboro;
+    margin-left: 10px;
+    font-size: 12px;
+    line-height: 20px;
+}
+
+.size-block:hover {
+    cursor: pointer;
+    border: 2px solid rgb(82, 80, 80);
+}
+
+#qty-container {
+    display: flex;
+    margin-bottom: 20px;
+}
+
+#qty-container > input {
+    width: 100px;
+    height: 20px;
+    margin-left: 20px;
+    border-color: gainsboro;
+    border-radius: 10px;
+}
+
+#add-cart-btn button{
+    background-color: black;
+    color: white;
+    width: 50%;
+    line-height: 30px;
+    margin-bottom: 20px;
+}
+
+#add-cart-btn button:hover {
+    cursor: pointer;
+}
+
+#details-info-container {
+    display: flex;
+    flex-direction: column;
+    height: 40%;
+}
+
+#details-info-container > div {
+    margin-bottom: 10px;
+}
+
+#divider {
+    margin-bottom: 40px;
+    width: 100%;
+    text-align: center;
+}
+
+#other-img-section {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    align-items: center;
+}
+
+#description {
+    margin-bottom: 30px;
+}
+
+#img-container {
+    display: flex;
+    flex-direction: column;
+    width: 60%;
+    height: 100%;
+    align-items: center;
+}
+
+#img-container img {
+    margin-bottom: 20px;
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: cover;
+}

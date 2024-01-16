@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Get payments</title>
+</head>
+<body>
+    <button onclick="sendMessage()">get all payment data</button>
+    <div id="show-data"></div>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/4.0.1/socket.io.js"></script>
+    <script>
+        const showData = document.querySelector('#show-data')
+        // const socket = io.connect('http://localhost:3000')
+        const socket = io()
+        
+        const sendMessage = async () => {
+            try {
+                const response = await axios.get('/api/2.0/report/payments')
+                alert(response.data.message)
+            } catch (err) {
+                alert(`Failed: ${err.response.data.message}`)
+            }
+        }
+
+        socket.on('response', (response) => {
+            showData.textContent = response
+        })
+    </script>
+</body>
+</html>

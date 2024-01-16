@@ -1,0 +1,60 @@
+#header-title {
+    font-size: 50px;
+    font-weight: 100;
+    text-align: center;
+    margin-top: 20px;
+    font-weight: 400;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+#form-section {
+    padding: 50px;
+}
+
+#variants {
+    margin-top: 30px;
+}
+
+.variant-group {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    border: 1px solid rgb(236, 231, 231);
+    border-radius: 10px;
+    padding: 20px;
+}
+
+.variant-input {
+    display: flex;
+    width: 20%;
+    height: 100%;
+    
+    /* margin-left: 20px;
+    margin-right: 20px; */
+}
+
+.color-code-input {
+    width: 100%;
+    align-self: center;
+    justify-content: center;
+}
+
+.delete-variant-btn {
+    background-color: red;
+    border-radius: 5px;
+    border: none;
+    color: white;
+    font-weight:500;
+    padding: 7px;
+}
+
+#submit-btn-container {
+    display: flex;
+    justify-content: center;
+}
+
+#submit-btn {
+    width: 200px;
+    align-self: center;
+}

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Credit Card Checkout</title>
+    <link rel="stylesheet" type="text/css" href="/CSS/admin/adminCheckout.css">
+</head>
+<body>
+    <section id="credit-card-section">
+        <div id="credit-card-container">
+            <div id="card-title">Enter card details</div>
+            <div id="card-input-container">
+                <div class="card-input"><label>Card Number</label><div class="tpfield tappay-field-focus card-input-field" id="card-number"></div></div>
+                <div class="card-input"><label>Expiry Date</label><div class="tpfield tappay-field-focus card-input-field" id="card-expiration-date"></div></div>
+                <div class="card-input"><label>CCV</label><div class="tpfield tappay-field-focus card-input-field" id="card-ccv"></div></div>
+                <div><button onclick="onSubmit(event)">Submit</button></div>
+            </div>
+        </div>
+    </section>
+
+    <script src="https://js.tappaysdk.com/sdk/tpdirect/v5.17.0"></script>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script src="../../public/JavaScript/admin/adminCheckout.js"></script>
+</body>
+</html>
