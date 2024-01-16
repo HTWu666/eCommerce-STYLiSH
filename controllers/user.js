@@ -4,8 +4,8 @@ import axios from 'axios'
 import { getUser, createUser } from '../models/user.js'
 
 const createToken = (user) =>
-  jwt.sign(user, process.env.ACCESS_TOKEN_SECRET, {
-    expiresIn: `${process.env.ACCESS_TOKEN_EXPIRATION_IN_SECOND}s`
+  jwt.sign(user, process.env.JWT_TOKEN, {
+    expiresIn: `${process.env.JWT_EXPIRATION_IN_SECOND}s`
   })
 
 export const signUp = async (req, res) => {
@@ -48,7 +48,7 @@ export const signUp = async (req, res) => {
     // Create response data
     const data = {
       access_token: accessToken,
-      access_expired: process.env.ACCESS_TOKEN_EXPIRATION_IN_SECOND,
+      access_expired: process.env.JWT_EXPIRATION_IN_SECOND,
       user
     }
 
@@ -103,14 +103,14 @@ const signInNative = async (req, res) => {
   // Create response data
   const data = {
     access_token: accessToken,
-    access_expired: process.env.ACCESS_TOKEN_EXPIRATION_IN_SECOND,
+    access_expired: process.env.JWT_EXPIRATION_IN_SECOND,
     user
   }
 
   return res
     .status(200)
     .cookie('access_token', accessToken, {
-      maxAge: process.env.ACCESS_TOKEN_EXPIRATION_IN_SECOND * 1000,
+      maxAge: process.env.JWT_EXPIRATION_IN_SECOND * 1000,
       httpOnly: true,
       secure: true,
       sameSite: 'Strict'
@@ -162,7 +162,7 @@ const signInFacebook = async (req, res) => {
     // Create response data
     const data = {
       access_token: accessToken,
-      access_expired: process.env.ACCESS_TOKEN_EXPIRATION_IN_SECOND,
+      access_expired: process.env.JWT_EXPIRATION_IN_SECOND,
       user
     }
 
