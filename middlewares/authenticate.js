@@ -16,8 +16,8 @@ const authenticate = async (req, res, next) => {
       return res.status(401).redirect('/')
     }
     const decoded = await jwtVerify(token, process.env.JWT_KEY)
-    const { userId } = decoded
-    res.locals.userId = userId
+    const user = decoded
+    res.locals.user = user
     next()
   } catch (err) {
     console.error(err)
